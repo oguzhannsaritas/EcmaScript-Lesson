@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const $ = (par) => document.querySelector(par);
+    </script>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        let map = new Map();
+        map.set("message", "javascript ecmascript");
+        map.set("show", "map and WeakMap dersi");
+        /* $("#result").innerHTML=map.has("show")+ "<br>"; // ------ Burda yapılan işlem  .has verilen değer varmı yookmu diye kontrol eder.
+                                                            // eğer varsa true döner. 
+         */
+
+
+
+     /*   $ ("#result").innerHTML=map.get("message")+ "<br>" ;   // Burda yapılan işlem verilen değer ekrana yazdırılır   
+        // yani map.get("message") yazıldıgında burda message = isim  onun değeri = "javascript ecmascript" dir ve ekrana messagının değeri olana javascript ecmascript yazısını yazıdırı.
+ */
+
+
+
+
+        // NOT ===  çıktı almak istersek get ile alırız .
+        // girdi yapmak istediğimizde set ile yaparız.
+
+
+
+
+
+
+/* 
+        map.delete("show");              // ---- Burda ise delete yaparak "show" değerini siliyoruz 
+        $("#result").innerHTML=map.get("show") + "<br>";    // get ile çıktı almak istediğimizde yani yazdırmak istedğimizde ise bize 
+                                                                //  "undefined" olarak veririr yani yazdırmak ıstedıgın deger bulunamadı.
+ */
+        
+
+ console.log(map.keys());   // ---Burda yapılan işlem keys isşlemi ANAHTAR olarak bilinir
+                            // yani map değişkenimin içindeki anahtarları yani isimleri konsola yaz 
+                            // denildği zaman message ve show anahtarlarımı console yazdırıcak.
+
+
+
+
+
+ console.log(map.values());         // aynı işlem burada değerler için yapılmaktadır.
+                                    // yani map değişkenimin içindeki message ve show isimlerinin
+                                    // değerlerini bana console yazdır demektir
+
+
+  // map.clear();               işlemi ise herşeyi siler.
+
+
+/* 
+  let map1 = new WeakMap();                 // WeakMap kodu map kodunun zayıf halidir
+                                            // yani map de bir çok seçenek varken weak map de 4 seçenek vardır.
+        map1.set("message", "javascript ecmascript");
+        map1.set("show", "map and WeakMap dersi");
+
+        $("#result").innerHTML=map1("show");
+
+
+ */
+
+ $("#result").innerHTML=map.size + "<br>";    // burda yapılan işlem bize ne kadar girdi yaptıgımızı gösteririr.
+console.log(map.size);
+
+
+/* 
+let veriekle = new Set();
+veriekle.add("javascript");
+veriekle.add("ecmascript");
+veriekle.add("eğitim seti");
+veriekle.add("hoşgeldiniz");
+veriekle.add("oğuzhan");
+$("#result").innerHTML=veriekle.size ===6 ? "yes": veriekle.add("ali")  ;
+console.log(veriekle);
+$("#result").innerHTML=veriekle.has("oguzhan") ? "yes" : veriekle.add("oguzhan");
+console.log(veriekle); */
+
+
+let map1 = new Map([
+    ['1', 'mert'],
+    [1, 'ali'],
+    [true, 'mehmet'],
+
+])
+console.log(map1);
+const x = map1.keys();
+const y =map1.values();
+console.log(y);
+
+console.log(x);
+ for(const ley of x){
+    console.log(ley);
+}
+ const c = Array.from(map1);
+ console.log(c);
+
+
+ 
+
+
+
+
+    </script>
+</body>
+
+</html>

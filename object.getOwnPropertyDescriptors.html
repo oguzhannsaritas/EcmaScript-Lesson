@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        const Object1 = {
+            property1: 42
+        };
+
+        const descriptors1 = Object.getOwnPropertyDescriptors(Object1);
+        console.log(descriptors1.property1.writable);
+        console.log(descriptors1.property1.value);
+
+        /* vritable = yazılabilir yada değişken  true veririr
+        value = değer consoleda değeri verir. */
+
+
+        /* Burda yapılan işlem şudur ;
+        object1  diye bir const değişken oluşturuyoruz.
+        property1 diye bir değişken oluşturuyoruz ve 
+        değerine 42 veriyoruz.
+
+        soncra descriptors1 diye bir tanımlama oluşturup
+        Object.getOwnPropertDescriptors() diyerek get ediyoruz 
+        Parantezin içine Oluşturduguz Object1 değişkenini koyuyoruz.
+
+        console.log() diyerek içine tanımlama yaptıgımız desciptors1 tanımımız koyarak
+        .property1 değişkenimizi yazıyoruz . koyarak writable YANİ yazılablirmi değişkenmi olup olmadıgını
+        kontrol ederiz ve bize true döner.
+
+        sonra property1.value  yazarak console value değerini 42 olarak yazdırmış oluruz.
+        
+        
+        */
+    </script>
+
+
+
+
+</body>
+
+</html>

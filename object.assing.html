@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        const a = { x: 1,y: 2 }
+        const b = { y: 8, z: 9}
+        const c = Object.assign(b, a)             // burda bu şekil oldugunda  y : 2  z : 9 x:1 olur 
+        console.log(c);           // ama Object.assing (a,b)  oldugunda   y : 8  x: 1 z :9 olur
+        //(a,b ) oldugunda a nın  ilk değerinı alıyor (x)i alıyor y  yi almıyor sonra b değişkenin y z sini yazdırıyor.
+        //(b,a) olduğunda a nın 2 değerinide alıyor b nin ilk değerini almıyor z değerini alıyor .
+        //yani (a,b) nin tersini yapıyor .
+
+
+
+
+
+        const obj1 = {"arms" : true , "armCount" : 2}
+        const ob2 = {"weapons": ["misle/ launcher", "reciprocating saw"]};
+        const obj3 = {"canMove" : true , "legs" : 0 , "Hands" : 15};
+
+        const robot = Object.assign({},ob2,obj1,obj3);
+        console.log(robot);
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const user1 = {
+            name: "oguzhan",
+            id: 100
+        };
+
+        const user2 = {};
+        Object.setPrototypeOf(user2, user1)
+        console.log(user2.name);        /* Burda yapılan işlem söyledir
+        user 1 deki değerleri setPrototypeOf kodu ile user2 ye aktarmaktadır.
+        Ama direkt console.log(user2) yaptıgımızda consolda user2 nın boş değerini
+        veririr . user1 in değerlerini almak için ise 
+        console.log(user2.name) dediğimizde user1 in name ini user2 ye aktararak
+        bize user2 de user1 in name ini user2 de verir set eder. Girdi yapar  */
+
+
+
+        const prototype1 = {};
+        const Object1 = Object.create(prototype1);
+        console.log(Object.getPrototypeOf(Object1) ===prototype1)
+
+        /* JavaScript Object getPrototypeOf() yöntemi, belirtilen nesnenin prototipini alır. Kalıtsal özellik yoksa null döndürür.
+
+ */
+        </script>
+
+
+
+
+
+
+</body>
+
+</html>

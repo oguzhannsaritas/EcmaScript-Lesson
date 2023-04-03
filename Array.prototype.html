@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array1 = [1, 2, 3, 4, 5, 6];
+        const found = array1.find(parametre => parametre > 5);
+        console.log(found);
+
+        function found2(param){
+            return param >3;
+        }
+        console.log(array1.find(found2));
+        
+        const x = function(par){
+            return par >5;
+        }
+        console.log(array1.find(x));
+
+        const y =function(param){
+            return param <2;
+        }
+        console.log(array1.find(y));
+
+        
+        function bul(parametre){
+            return parametre <4;
+        }
+        console.log(array1.find(bul));
+
+
+
+
+
+        /* 
+        find() yöntemi, sağlanan dizide sağlanan sınama işlevini karşılayan ilk öğeyi döndürür. 
+        Hiçbir değer sınama işlevini karşılamıyorsa, tanımsız döndürülür.
+        
+        
+        
+        yani şöyle ;
+        find metodu ile verilen değer 5 den büyük sayı hangisidir diye 
+        soruluyor index yerine direkt olarak ona karsılık gelen değeri 
+        yazdırıyor .*/
+    </script>
+</body>
+
+</html>

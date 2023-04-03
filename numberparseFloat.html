@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const $ = (par) => document.querySelector(par);
+    </script>
+</head>
+
+<body>
+
+
+
+
+<div id="result"></div>
+
+<script>
+show();
+function show() {                               // parseInt() --> Bağımsız değişkeni ayrıştırır
+                                                // ve bir tam sayı döndürür.
+
+
+                                               
+
+
+
+    $("#result").innerHTML+=
+  
+    parseInt("7")+ "<br>"+
+    parseInt("70 ")+ "<br>"+
+    parseInt(" 50")+ "<br>"+
+    parseInt("7 68")+ "<br>"+
+    parseInt("JS")+ "<br>"+
+    parseInt("3.14")+ "<br>"+
+    parseInt("7 days")+ "<br>"+      // ------7 days yazılan yerde ilk rakam gördüğü için rakamı alıcak
+    parseInt("28 days")+ "<br>";
+
+
+
+
+     
+  }
+
+oguz();
+function oguz(){
+    $("#result").innerHTML+=
+
+    parseFloat("7")+ "<br>"+                 // parseFloat() --- Bağımsız değişkeni ayrıştırır
+    parseFloat("70 ")+ "<br>"+              //ve kayan noktalı (ondalıklı) sayı veririr.  
+    parseFloat(" 50")+ "<br>"+
+    parseFloat("7.68")+ "<br>"+
+    parseFloat("JS")+ "<br>"+
+    parseFloat("3.14")+ "<br>";
+
+
+}
+
+</script>
+
+
+
+
+</body>
+
+</html>

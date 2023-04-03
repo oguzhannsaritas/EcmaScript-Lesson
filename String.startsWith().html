@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const $ = (par) => document.querySelector(par);
+    </script>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        let text = "Lorem ipsum dolor sit amet.Lorem ipsum, dolor sit amet consectetur nokta.";
+        let txt = "Node JS";
+        /* $("#result").innerHTML=txt.repeat(5);     // tekrar etme olarak kullanılır
+         */
+
+
+    /*     $("#result").innerHTML = text.startsWith("ipsum", 6) ? "aradığımız kelime cümlenin başında geçiyor " :
+            "aradığımız kelime cümlenin başında geçmiyor "; */
+
+/* $("#result").innerHTML=text.endsWith("nokta.") ? "TRUE" : "FALSE"; // Burda ise verilen değer cümlenin sonundamı değilmi diye kontrol eder.
+ */
+
+ $("#result").innerHTML=text.includes("amet")? "TRUE":"FALSE"; // Burda ise verilen değer cümlenin herhangi yerinde geçiyormu geçmiyormu diye kontrol eder.
+    </script>
+
+</body>
+<!--$("#result").innerHTML = text.startsWith("ipsum", 6) -----Şeklinde yazıldığında 
+cümlenin 6 ci index değerinden sonra verilen değer yazılmışmı yazılmamışmı diye kontrol eder
+
+
+$("#result").innerHTML = text.startsWith("ipsum") ------- Şeklinde yazılıdında verilen değerin 
+yani startWith("ipsum ") değerinin verilen değer burda ("ipsum") textin içinde cümlenin başında başlıyormu diye kontrol eder
+
+
+
+
+
+$("#result").innerHTML = text.startsWith("ipsum", 6) ? ------ bu şekilde yazıldınga
+
+koyulan soru işareti ?  if / else görevi görmektedir yani kısaca 
+
+$("#result").innerHTML = text.startsWith("ipsum", 6) ? "true" : "false" ;  
+şeklinde yazılır bu kodun anlamı şu şekildedir.
+verilen ipsum değeri index değerinin 6 ci değerinden sonramı başlıyor doğru ise (İF) ekrana true yazdırır.
+yanlış ise yani ( eğer değil ise (else) ): false olarak ekrana yazdırır.
+-->
+
+</html>
